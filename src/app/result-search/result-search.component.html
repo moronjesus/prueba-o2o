@@ -1,0 +1,17 @@
+<div class="row">
+  <div *ngFor="let beer of beers"class="col-md-4 col-sm-6">
+    <div  class="card">
+      <div class="img-container">
+        <img [src]="beer.image_url ? beer.image_url : srcImgDefault " 
+             [alt]="beer.name" 
+             class="img__detail">
+      </div>
+      <div class="title">
+          {{beer.name}}
+      </div>
+      <div>
+        {{beer.description}}
+      </div>
+    </div>
+  </div>
+</div>
